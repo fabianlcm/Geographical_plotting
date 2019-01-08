@@ -1,11 +1,8 @@
 import plotly.graph_objs as go
 from plotly.offline import init_notebook_mode, iplot
 init_notebook_mode(connected=True)
-import numpy as np
-import matplotlib.pyplot as plt
-import pandas as plt
-%matplotlib inline
 
+# function of an orthographic-type map
 def orthographicMap(my_countries, my_title, my_colors):
     map_data = dict(type = 'choropleth',
                 locations = my_locations,
@@ -21,15 +18,15 @@ def orthographicMap(my_countries, my_title, my_colors):
     iplot(my_map)
     
     
-# list of my countries visited
+# list of countries
 my_countries = ['Colombia', 'Venezuela', 'Mexico', 'United States', 
                 'The Bahamas', 'United Kingdom', 'Belgium', 'Spain', 
                 'China', 'France', 'Germany', 'Turkey']
 
-# choose title of the map
+# title of the map
 my_title = 'My list of visited countries'
 
-# choose colors in rgb format 
+# colors in rgb format 
 my_colors = ['rgb(255, 255, 255)', 'rgb(250, 0, 0)']
 
 orthoghraphicMap(my_countries, my_title, my_colors)
